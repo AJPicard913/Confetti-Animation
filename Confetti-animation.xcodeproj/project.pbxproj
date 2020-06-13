@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		096827DB2494923200970865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096827D92494923200970865 /* LaunchScreen.storyboard */; };
 		096827E62494923200970865 /* Confetti_animationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096827E52494923200970865 /* Confetti_animationTests.swift */; };
 		096827F12494923200970865 /* Confetti_animationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096827F02494923200970865 /* Confetti_animationUITests.swift */; };
+		096828002494935A00970865 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 096827FF2494935A00970865 /* Lottie */; };
+		096828022494938B00970865 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096828012494938B00970865 /* LottieView.swift */; };
+		096828072494941C00970865 /* Confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 096828062494941C00970865 /* Confetti.json */; };
+		09682809249494F000970865 /* LottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09682808249494F000970865 /* LottieAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		096827EC2494923200970865 /* Confetti-animationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Confetti-animationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		096827F02494923200970865 /* Confetti_animationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Confetti_animationUITests.swift; sourceTree = "<group>"; };
 		096827F22494923200970865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		096828012494938B00970865 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		096828062494941C00970865 /* Confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Confetti.json; sourceTree = "<group>"; };
+		09682808249494F000970865 /* LottieAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096828002494935A00970865 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				096827CD2494923000970865 /* Confetti-animation */,
-				096827E42494923200970865 /* Confetti-animationTests */,
+				096828052494941C00970865 /* LottieAnimations */,
 				096827EF2494923200970865 /* Confetti-animationUITests */,
 				096827CC2494923000970865 /* Products */,
 			);
@@ -105,6 +113,9 @@
 				096827D42494923200970865 /* Assets.xcassets */,
 				096827D92494923200970865 /* LaunchScreen.storyboard */,
 				096827DC2494923200970865 /* Info.plist */,
+				096828012494938B00970865 /* LottieView.swift */,
+				09682808249494F000970865 /* LottieAnimation.swift */,
+				096827E42494923200970865 /* Confetti-animationTests */,
 				096827D62494923200970865 /* Preview Content */,
 			);
 			path = "Confetti-animation";
@@ -136,6 +147,14 @@
 			path = "Confetti-animationUITests";
 			sourceTree = "<group>";
 		};
+		096828052494941C00970865 /* LottieAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				096828062494941C00970865 /* Confetti.json */,
+			);
+			path = LottieAnimations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +171,9 @@
 			dependencies = (
 			);
 			name = "Confetti-animation";
+			packageProductDependencies = (
+				096827FF2494935A00970865 /* Lottie */,
+			);
 			productName = "Confetti-animation";
 			productReference = 096827CB2494923000970865 /* Confetti-animation.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 096827C22494923000970865;
+			packageReferences = (
+				096827FE2494935A00970865 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 096827CC2494923000970865 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -241,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				096827DB2494923200970865 /* LaunchScreen.storyboard in Resources */,
+				096828072494941C00970865 /* Confetti.json in Resources */,
 				096827D82494923200970865 /* Preview Assets.xcassets in Resources */,
 				096827D52494923200970865 /* Assets.xcassets in Resources */,
 			);
@@ -270,6 +296,8 @@
 				096827CF2494923100970865 /* AppDelegate.swift in Sources */,
 				096827D12494923100970865 /* SceneDelegate.swift in Sources */,
 				096827D32494923100970865 /* ContentView.swift in Sources */,
+				096828022494938B00970865 /* LottieView.swift in Sources */,
+				09682809249494F000970865 /* LottieAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"Confetti-animation/Preview Content\"";
 				DEVELOPMENT_TEAM = 4F95F96C4N;
 				ENABLE_PREVIEWS = YES;
@@ -455,6 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"Confetti-animation/Preview Content\"";
 				DEVELOPMENT_TEAM = 4F95F96C4N;
 				ENABLE_PREVIEWS = YES;
@@ -594,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		096827FE2494935A00970865 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		096827FF2494935A00970865 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 096827FE2494935A00970865 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 096827C32494923000970865 /* Project object */;
 }

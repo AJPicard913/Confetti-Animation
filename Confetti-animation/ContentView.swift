@@ -9,8 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var celebrate = false
+    
     var body: some View {
-        Text("Hello, World!")
+        ZStack {
+            
+            VStack{
+                VStack {
+                    LottieAnimation()
+                }
+                .opacity(celebrate ? 1 : 0.0)
+                
+                VStack {
+                    Text("Press me to celebrate!!")
+                        .font(.system(size: 22, weight: .bold, design: .rounded))
+                    
+                        .onTapGesture {
+                            self.celebrate = true
+                    }
+                }
+            
+
+            }
+        }
     }
 }
 
